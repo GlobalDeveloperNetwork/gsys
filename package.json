@@ -1,0 +1,91 @@
+{
+  "name": "gsys",
+  "description": "GitOps.Systems Multi-Cloud CLI.  This is in active development, no warranty is provided, please use at your own RISK.",
+  "version": "1.0.0",
+  "author": "Full Stack Engine, LLC.  A LARGE Ltd. | LMG Digital Brand",
+  "bin": {
+    "gsys": "./bin/run"
+  },
+  "bugs": "https://github.com/GlobalDeveloperNetwork/Gsys/issues",
+  "dependencies": {
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^3",
+    "tslib": "^1"
+  },
+  "devDependencies": {
+    "@bearer/tslint-config": "^0.114.1",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@oclif/command": "^1.8.0",
+    "@oclif/dev-cli": "^1.26.0",
+    "@oclif/errors": "^1.3.4",
+    "@oclif/parser": "^3.8.5",
+    "@oclif/plugin-autocomplete": "^0.3.0",
+    "@oclif/plugin-commands": "^1.3.0",
+    "@oclif/plugin-not-found": "^1.2.4",
+    "@oclif/plugin-plugins": "^1.9.5",
+    "@oclif/plugin-warn-if-update-available": "^1.7.0",
+    "@oclif/semantic-release": "^3.1.5",
+    "@oclif/test": "^1.2.8",
+    "@types/chai": "^4",
+    "@types/mocha": "^5",
+    "@types/node": "^10",
+    "chai": "^4",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.13",
+    "eslint-config-oclif": "^3.1",
+    "eslint-config-oclif-typescript": "^0.1",
+    "globby": "^10",
+    "gulp": "^4.0.2",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "husky": "^1.3.1",
+    "lerna": "^3.15.0",
+    "lint-staged": "^8.1.0",
+    "merge2": "^1.4.1",
+    "mocha": "^5",
+    "nyc": "^14",
+    "oclif": "^1.16.1",
+    "per-env": "^1.0.2",
+    "pizzly-node": "^0.1.0",
+    "prettier": "^1.16.1",
+    "ts-node": "^8",
+    "tslint": "^5.15.0",
+    "typescript": "^3.3"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://github.com/GlobalDeveloperNetwork/gsys",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "Apache 2.0",
+  "main": "lib/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "gsys",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-autocomplete",
+      "@oclif/plugin-commands",
+      "@oclif/plugin-not-found",
+      "@oclif/plugin-plugins",
+      "@oclif/plugin-warn-if-update-available"
+    ]
+  },
+  "repository": "GlobalDeveloperNetwork/gsys",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "eslint . --ext .ts --config .eslintrc",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "types": "lib/index.d.ts"
+}

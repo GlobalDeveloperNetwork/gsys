@@ -1,0 +1,16 @@
+{
+  "extends": "@bearer/tslint-config",
+  "rules": {
+    "object-curly-spacing": [true, "always"],
+    "no-console": false
+  },
+  "linterOptions": {
+    "exclude": [
+      "**/node_modules/**",
+      "**/templates/**",
+      "**/__fixtures__/**",
+      "package.json",
+      ".github/PULL_REQUEST_TEMPLATE.md"
+    ]
+  }
+}
