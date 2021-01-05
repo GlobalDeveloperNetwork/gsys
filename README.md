@@ -3,6 +3,9 @@
 
 This is an experimental CLI in active development.  Please USE AT YOUR OWN RISK.
 
+SERIOUSLY FOLKS DON'T DOWNLOAD IT, this is just boilerplate and a little tiny bit of code till I can work on it next week.
+I have like 5 people working on various parts but it isn't ready yet.
+
 ## What is it?
 An Oclif based CLI that is designed to provide multi-cloud deployment capabilities. 
 
